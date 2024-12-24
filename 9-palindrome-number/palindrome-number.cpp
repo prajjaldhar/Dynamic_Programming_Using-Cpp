@@ -7,13 +7,13 @@ public:
         }
 
         int reversed = 0;
-        while (x > reversed) {
+        while (x>reversed) {
             reversed = reversed * 10 + x % 10;
             x /= 10;
         }
 
         // For even-length numbers, x and reversed will be the same.
         // For odd-length numbers, reversed will have an extra digit in the middle, which we can ignore.
-        return x == reversed || x == reversed / 10;
+        return x == reversed || x == reversed/10;
     }
 };
