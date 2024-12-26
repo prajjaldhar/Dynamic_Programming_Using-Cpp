@@ -1,17 +1,34 @@
 class Solution {
-public:
-    int addDigits(int num) {
-       
-        while(num>9)
+public: 
+
+
+    int digitcount(int n)
+    {
+        int count=0;
+    while(n!=0)
+    {
+        count++;
+        n/=10;
+    }
+    return count;
+    }
+    int sumofdigits(int n)
+    {
+        int sum=0;
+        while(n!=0)
         {
-             int sum=0;
-            while(num>0)
-            {
-                sum+=num%10;
-                num/=10;
-            }
-             num = sum;
+            sum+=n%10;
+            n/=10;
         }
-      return num;
+        return sum;
+    }
+    int addDigits(int num) {
+        if(num==0)
+            return num;
+        while(digitcount(num)!=1)
+        {
+            num=sumofdigits(num);
+        }
+        return num;
     }
 };
