@@ -10,11 +10,10 @@ public:
 
     // Check from 1 to n
     for (int i = 1; i <= nums.size(); i++) {
-        if (mp.find(i) == mp.end()) {
+        if (mp.count(i) == 0) {
             return i;
         }
     }
-
-    return nums.size() + 1;
-}
+        return nums.size() + 1;
+    }
 };
