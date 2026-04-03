@@ -9,7 +9,8 @@ public:
     }
 
     // Check from 1 to n
-    for (int i = 1; i <= nums.size(); i++) {
+    
+    for (int i=1; i <= nums.size(); i++) {
         if (mp.count(i) == 0) {
             return i;
         }
