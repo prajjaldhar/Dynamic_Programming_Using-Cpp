@@ -9,6 +9,6 @@ public:
         }
         if(sum>INT_MAX || sum<INT_MIN)
             return 0;
-        return sum;
+        return int(sum);
     }
 };
